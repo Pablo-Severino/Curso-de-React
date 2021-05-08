@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AreaHeader = styled.div`
     height: 60px;
-    background-color: #791E94;
+    background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
     color: #fff;
 
     .container {
@@ -26,5 +26,15 @@ export const AreaHeader = styled.div`
     nav ul li {
      list-style: none;
      margin-left: 20px;
+     text-decoration: none;
+    }
+
+    nav ul li a {
+     text-decoration: none;
+     color: #fff;
+
+    &:hover {
+        color: #b9b9b9;
+    }
     }
 `;
