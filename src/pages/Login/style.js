@@ -15,6 +15,19 @@ export const AreaLogin = styled.div`
      font-size: 24px;
     }
 
+    .organize {
+     display: flex;
+    }
+
+    a {
+     color: #000;
+    }
+
+    p {
+     font-size: 13px;
+     color: #9c9c9c;
+    }
+
     .font--input {
      text-align: left;
     }
@@ -48,6 +61,7 @@ export const AreaLogin = styled.div`
      margin-left: 5px;
      color: #4e129c;
      transition: 0.4s;
+     text-decoration: none;
      cursor: pointer;
 
     &:hover {
