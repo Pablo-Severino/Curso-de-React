@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
+import Api from '../../Api';
+
 import { AreaLogin } from './style';
 
 import { BtnDefaultIcons, BtnDefault } from '../../components/Style';
@@ -9,7 +11,18 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import GTranslateIcon from '@material-ui/icons/GTranslate';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
-export default () => {
+export default ({onReceiveGoogle}) => {
+
+    const actionLoginGoogle = async () => {
+        let result = await Api.googleLogar();
+
+        if(result) {
+            onReceiveGoogle(result.user);
+        } else {
+            alert('Error');
+        }
+    }
+    
     return (
     <BrowserRouter>
         <Switch>
@@ -56,7 +69,7 @@ export default () => {
                         <div className="center">Fazer login com o Facebook</div>
                     </BtnDefaultIcons>
 
-                    <BtnDefaultIcons>
+                    <BtnDefaultIcons onClick={actionLoginGoogle}>
                         <GTranslateIcon />
                         <div className="center">Fazer login com o Google</div>
                     </BtnDefaultIcons>

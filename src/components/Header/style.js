@@ -19,6 +19,10 @@ export const AreaHeader = styled.div`
      width: 50px;
     }
 
+    nav {
+     display: flex;
+    }
+
     nav ul {
      display: flex;
     }
@@ -33,8 +37,33 @@ export const AreaHeader = styled.div`
      text-decoration: none;
      color: #fff;
 
-    &:hover {
-        color: #b9b9b9;
+     &:hover {
+      color: #b9b9b9;
+     }
     }
+
+    .avatar {
+     display: flex;
+     align-items: center;
+
+    @media screen and (max-width: 600px) {
+        label {
+         display: none;
+        }
+    }
+    }
+
+    .avatar img {
+     width: 35px;
+     border-radius: 20px;
+     margin-left: 20px;
+     margin-right: 10px;
+     cursor: pointer;
+    }
+
+    .avatar label {
+     font-size: 14px;
+     cursor: pointer;
+     color: #ccc;
     }
 `;
